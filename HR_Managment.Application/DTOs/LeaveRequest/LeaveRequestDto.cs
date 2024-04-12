@@ -1,6 +1,6 @@
 ﻿using HR_Managment.Domain.Models;
 
-namespace HR_Managment.Application.DTOs
+namespace HR_Managment.Application.DTOs.LeaveRequest
 {
     public class LeaveRequestDto
     {
