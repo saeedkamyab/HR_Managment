@@ -2,7 +2,7 @@
 
 namespace HR_Managment.Application.DTOs
 {
-    public class LeaveAllocationDto
+    public class LeaveAllocationDto:BaseDto<int>
     {
         public int DayCount { get; set; }
         public int Period { get; set; }

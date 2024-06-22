@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HR_Managment.Application.DTOs.LeaveRequest
 {
-    public class LeaveRequestListDto
+    public class LeaveRequestListDto:BaseDto<int>
     {
         public DateTime DateRequested { get; set; }
         public bool? Approved { get; set; }
