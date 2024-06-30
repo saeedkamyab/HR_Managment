@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HR_Managment.Application.Contracts.Persistence;
-using HR_Managment.Application.DTOs;
+using HR_Managment.Application.DTOs.LeaveAllocation;
 using HR_Managment.Application.Features.LeaveAllocations.Requests.Queries;
 using HR_Managment.Application.Features.LeaveType.Requests.Queries;
 using MediatR;

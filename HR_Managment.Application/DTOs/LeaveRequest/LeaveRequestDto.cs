@@ -1,4 +1,5 @@
-﻿using HR_Managment.Domain.Models;
+﻿using HR_Managment.Application.DTOs.LeaveType;
+using HR_Managment.Domain.Models;
 
 namespace HR_Managment.Application.DTOs.LeaveRequest
 {
