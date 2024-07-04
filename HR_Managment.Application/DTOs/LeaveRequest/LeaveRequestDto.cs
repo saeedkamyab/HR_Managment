@@ -1,5 +1,6 @@
 ﻿using HR_Managment.Application.DTOs.LeaveType;
 using HR_Managment.Domain.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace HR_Managment.Application.DTOs.LeaveRequest
 {
@@ -13,7 +14,8 @@ namespace HR_Managment.Application.DTOs.LeaveRequest
         public bool? Approved { get; set; }
         public bool Cancelled { get; set; }
 
-        public LeaveTypeDto LeaveType { get; set; }
+        [Required]
+        public required LeaveTypeDto LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
 
     }

@@ -1,5 +1,6 @@
 ﻿using HR_Managment.Domain.Models.Common;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace HR_Managment.Domain.Models
 {
@@ -15,7 +16,8 @@ namespace HR_Managment.Domain.Models
 
 
         #region Relation to LeaveType
-        public LeaveType LeaveType { get; set; }
+        [Required]
+        public required LeaveType LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
         #endregion
 
