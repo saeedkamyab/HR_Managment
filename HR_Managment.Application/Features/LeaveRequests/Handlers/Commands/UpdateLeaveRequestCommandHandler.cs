@@ -25,9 +25,17 @@ namespace HR_Managment.Application.Features.LeaveRequests.Handlers.Commands
 
         public async Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            var leaveRequest = await _leaveRequestRepository.Get(request.LeaveRequestDto.Id);
-            _mapper.Map(request.LeaveRequestDto, leaveRequest);
-            await _leaveRequestRepository.Update(leaveRequest);
+            var leaveRequest = await _leaveRequestRepository.Get(request.Id);
+            if (request.LeaveRequestDto != null)
+            {
+                _mapper.Map(request.LeaveRequestDto, leaveRequest);
+                await _leaveRequestRepository.Update(leaveRequest);
+            }
+            else if(request.ChangeLeaveRequestApprovedDto!=null)
+            {
+                await _leaveRequestRepository.ChangeApprovalStatus(leaveRequest, request.ChangeLeaveRequestApprovedDto.Approved);
+            }
+
             return Unit.Value;
         }
     }
