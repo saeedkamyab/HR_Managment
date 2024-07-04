@@ -7,7 +7,7 @@ namespace HR_Managment.Application.DTOs.LeaveAllocation
     {
         public int DayCount { get; set; }
         public int Period { get; set; }
-        public LeaveTypeDto LeaveType { get; set; }
+        public required LeaveTypeDto LeaveType { get; set; } 
         public int LeaveTypeId { get; set; }
 
     }

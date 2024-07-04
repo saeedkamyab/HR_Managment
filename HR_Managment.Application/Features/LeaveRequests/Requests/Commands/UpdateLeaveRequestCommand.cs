@@ -11,7 +11,7 @@ namespace HR_Managment.Application.Features.LeaveRequests.Requests.Commands
 {
     public class UpdateLeaveRequestCommand : IRequest<Unit>
     {
-        public LeaveRequestDto LeaveRequestDto { get; set; }
+        public required LeaveRequestDto LeaveRequestDto { get; set; }
 
     }
   

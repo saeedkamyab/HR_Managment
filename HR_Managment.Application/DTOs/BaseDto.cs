@@ -8,6 +8,6 @@ namespace HR_Managment.Application.DTOs
 {
     public class BaseDto<TKey>
     {
-        public TKey Id { get; set; }
+        public required TKey Id { get; set; }
     }
 }

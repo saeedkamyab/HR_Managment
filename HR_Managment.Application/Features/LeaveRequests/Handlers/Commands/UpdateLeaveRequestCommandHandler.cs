@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HR_Managment.Application.Contracts.Persistence;
+using HR_Managment.Application.DTOs.LeaveRequest;
 using HR_Managment.Application.Features.LeaveRequests.Requests.Commands;
 using HR_Managment.Application.Features.LeaveType.Requests.Commands;
 using MediatR;
@@ -22,9 +23,12 @@ namespace HR_Managment.Application.Features.LeaveRequests.Handlers.Commands
             _leaveRequestRepository = leaveRequestRepository;
         }
 
-        public Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var leaveRequest = await _leaveRequestRepository.Get(request.LeaveRequestDto.Id);
+            _mapper.Map(request.LeaveRequestDto, leaveRequest);
+            await _leaveRequestRepository.Update(leaveRequest);
+            return Unit.Value;
         }
     }
 }

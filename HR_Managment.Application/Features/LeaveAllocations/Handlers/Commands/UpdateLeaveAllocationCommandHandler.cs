@@ -2,6 +2,7 @@
 using HR_Managment.Application.Contracts.Persistence;
 using HR_Managment.Application.Features.LeaveAllocations.Requests.Commands;
 using HR_Managment.Application.Features.LeaveType.Requests.Commands;
+using HR_Managment.Domain.Models;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,12 @@ namespace HR_Managment.Application.Features.LeaveAllocations.Handlers.Commands
             _leaveAllocationRepository = leaveAllocationRepository;
         }
 
-        public Task<Unit> Handle(UpdateLeaveAllocationCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var leaveAllocation = await _leaveAllocationRepository.Get(request.LeaveAllocationDto.Id);
+            _mapper.Map(request.LeaveAllocationDto, leaveAllocation);
+            await _leaveAllocationRepository.Update(leaveAllocation);
+            return Unit.Value;
         }
     }
 }

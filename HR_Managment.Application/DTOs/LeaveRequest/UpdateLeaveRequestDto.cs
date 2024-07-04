@@ -11,7 +11,7 @@ namespace HR_Managment.Application.DTOs.LeaveRequest
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string RequestComments { get; set; }
+        public string? RequestComments { get; set; }
         public bool Cancelled { get; set; }
         public int LeaveTypeId { get; set; }
     }
