@@ -8,7 +8,7 @@ namespace HR_Managment.Domain.Models
         public int Period { get; set; }
 
         #region Relation to LeaveType
-        public required LeaveType LeaveType { get; set; }
+        public LeaveType LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
         #endregion
     }
