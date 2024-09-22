@@ -10,7 +10,7 @@ namespace HR_Managment.Domain.Models.Common
         public DateTime CreatedDateTime { get; set; }
         public DateTime LastModified { get; set; }
         [Required]
+        public required string CreatedBy { get; set; }
         public required string LastModifiedBy { get; set; }
-
     }
 }
