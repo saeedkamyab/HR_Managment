@@ -11,6 +11,6 @@ namespace HR_Managment.Application.DTOs.LeaveRequest
     {
         public DateTime DateRequested { get; set; }
         public bool? Approved { get; set; }
-        public required LeaveTypeDto LeaveType { get; set; }
+        public required CreateLeaveTypeDto LeaveType { get; set; }
     }
 }

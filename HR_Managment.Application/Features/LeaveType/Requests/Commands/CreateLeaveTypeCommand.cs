@@ -10,6 +10,6 @@ namespace HR_Managment.Application.Features.LeaveType.Requests.Commands
 {
     public class CreateLeaveTypeCommand:IRequest<int>//I use int becuse I wanna get Id of a recorde that is inserted. 
     {
-        public required LeaveTypeDto LeaveTypeDto { get; set; }
+        public required CreateLeaveTypeDto LeaveTypeDto { get; set; }
     }
 }

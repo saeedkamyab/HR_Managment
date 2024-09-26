@@ -15,7 +15,7 @@ namespace HR_Managment.Application.DTOs.LeaveRequest
         public bool Cancelled { get; set; }
 
         [Required]
-        public required LeaveTypeDto LeaveType { get; set; }
+        public required CreateLeaveTypeDto LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
 
     }

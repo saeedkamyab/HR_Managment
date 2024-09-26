@@ -1,5 +1,4 @@
-﻿using HR_Managment.Application.DTOs.LeaveType;
-using MediatR;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace HR_Managment.Application.Features.LeaveType.Requests.Commands
 {
-    public class UpdateLeaveTypeCommand:IRequest<Unit>
+    public class DeleteLeaveTypeCommand:IRequest<Unit>
     {
-        public required CreateLeaveTypeDto LeaveTypeDto { get; set; }
-
+        public int Id { get; set; }
     }
 }
