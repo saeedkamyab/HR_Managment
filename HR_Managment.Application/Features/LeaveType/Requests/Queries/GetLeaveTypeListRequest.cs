@@ -3,7 +3,7 @@ using MediatR;
 
 namespace HR_Managment.Application.Features.LeaveType.Requests.Queries
 {
-    public class GetLeaveTypeListRequest : IRequest<List<CreateLeaveTypeDto>>
+    public class GetLeaveTypeListRequest : IRequest<List<LeaveTypeDto>>
     {
 
     }

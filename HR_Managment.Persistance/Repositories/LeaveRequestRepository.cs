@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HR_Managment.Persistance.Repositories
 {
-    public class LeaveRequestRepository : GenericRepository<int, LeaveRequest>, ILeaveRequestRepository
+    public class LeaveRequestRepository : GenericRepository<LeaveRequest>, ILeaveRequestRepository
     {
         private readonly LeaveManagmentDbContext _context;
         public LeaveRequestRepository(LeaveManagmentDbContext context) : base(context)

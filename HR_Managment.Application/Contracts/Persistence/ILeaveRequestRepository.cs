@@ -3,7 +3,7 @@ using HR_Managment.Domain.Models;
 
 namespace HR_Managment.Application.Contracts.Persistence
 {
-    public interface ILeaveRequestRepository:IBaseRepository<int,LeaveRequest>
+    public interface ILeaveRequestRepository:IBaseRepository<LeaveRequest>
     {
         Task<LeaveRequest> GetLeaveRequestWithDetails(int id);
         Task<List<LeaveRequest>> GetLeaveRequestsWithDetails();

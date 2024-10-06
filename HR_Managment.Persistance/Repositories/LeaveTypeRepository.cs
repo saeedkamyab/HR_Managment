@@ -8,7 +8,7 @@ using HR_Managment.Domain.Models;
 
 namespace HR_Managment.Persistance.Repositories
 {
-    public class LeaveTypeRepository:GenericRepository<int,LeaveType>,ILeaveTypeRepository
+    public class LeaveTypeRepository:GenericRepository<LeaveType>,ILeaveTypeRepository
     {
         private readonly LeaveManagmentDbContext _context;
         public LeaveTypeRepository(LeaveManagmentDbContext context):base(context)

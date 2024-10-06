@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace HR_Managment.Persistance
 {
-    public class PersistanceServicesRegistration
+    public static class PersistanceServicesRegistration
     {
         public static IServiceCollection ConfigurePersistanceServices(this IServiceCollection services,IConfiguration configuration)
         {

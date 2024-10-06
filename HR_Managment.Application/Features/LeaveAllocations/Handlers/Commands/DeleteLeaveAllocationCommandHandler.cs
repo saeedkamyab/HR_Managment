@@ -24,7 +24,7 @@ namespace HR_Managment.Application.Features.LeaveAllocations.Handlers.Commands
         public async Task<Unit> Handle(DeleteLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
             var leaveAllocation =await _leaveAllocationRepository.Get(request.Id);
-            await _leaveAllocationRepository.Delete(leaveAllocation.Id);
+            await _leaveAllocationRepository.Delete(leaveAllocation);
             return(Unit.Value);
         }
     }

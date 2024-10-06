@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HR_Managment.Persistance.Repositories
 {
-    public class GenericRepository<TKey, TEntity> : IBaseRepository<TKey, TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         private LeaveManagmentDbContext _context;
 
@@ -29,7 +29,7 @@ namespace HR_Managment.Persistance.Repositories
           await  _context.SaveChangesAsync();
         }
 
-        public async Task<TEntity> Get(TKey id)
+        public async Task<TEntity> Get(int id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }

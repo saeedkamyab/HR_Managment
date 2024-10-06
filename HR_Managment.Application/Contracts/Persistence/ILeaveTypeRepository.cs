@@ -3,7 +3,7 @@ using HR_Managment.Domain.Models;
 
 namespace HR_Managment.Application.Contracts.Persistence
 {
-    public interface ILeaveTypeRepository : IBaseRepository<int, LeaveType>
+    public interface ILeaveTypeRepository : IBaseRepository<LeaveType>
     {
     }
 }
