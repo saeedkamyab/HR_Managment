@@ -22,4 +22,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HR_Managment.Domain\HR_Managment.Domain.csproj" />
+    <ProjectReference Include="..\HR_Managment.Persistance\HR_Managment.Persistance.csproj" />
+  </ItemGroup>
+
 </Project>
