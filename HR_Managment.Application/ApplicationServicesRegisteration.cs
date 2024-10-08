@@ -16,6 +16,7 @@ namespace HR_Managment.Application
         {
             //  services.AddAutoMapper(typeof(MappingProfile)); in this way you have to call a specific file name but in below way it find automatically
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
         }
     }
 }
